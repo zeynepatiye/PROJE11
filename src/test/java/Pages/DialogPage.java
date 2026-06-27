@@ -111,6 +111,35 @@ public class DialogPage extends ParentPage{
     @FindBy(css="[id='updateProfileResult']>h1")
     public WebElement updateAssert;
 
+    @FindBy(css="[id='openAccountForm']>form>div>input")
+    public WebElement openNewAccountBtn;
+
+    @FindBy(css="[id='transferForm']>p>input")
+    public WebElement amountMoney;
+
+    @FindBy(xpath="//*[@id='toAccountId']")
+    public WebElement selectAccount;
+
+    @FindBy(xpath="//*[@id='toAccountId']/option[1]")
+    public WebElement selectAccount1;
+
+    @FindBy(css="[id='transferForm']>div>input")
+    public WebElement transferButton;
+
+    @FindBy(xpath="//h1[text()='Transfer Complete!']")
+    public WebElement transferComplete;
+
+    @FindBy(xpath="//*[@id='openAccountResult']/h1")
+    public WebElement newAccountConfirm;
+
+    @FindBy(xpath="//*[@id='toAccountId']")
+    public WebElement toAccountIdSelectElement;
+
+    @FindBy(id = "openAccountResult")
+    public WebElement openAccountResultContainer;
+
+
+
     
 
 

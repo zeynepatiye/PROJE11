@@ -14,6 +14,12 @@ public class NavigatePage extends ParentPage
     @FindBy (xpath = "//*[@id='leftPanel']/ul/li[6]/a")
     public WebElement updateContactInfo;
 
+    @FindBy (linkText = "Open New Account")
+    public WebElement openNewAccount ;
+
+    @FindBy (linkText = "Transfer Funds")
+    public WebElement transferFunds ;
+
 
 
 }
