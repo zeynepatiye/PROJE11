@@ -120,7 +120,7 @@ public class DialogPage extends ParentPage{
     @FindBy(xpath="//*[@id='toAccountId']")
     public WebElement selectAccount;
 
-    @FindBy(xpath="//*[@id='toAccountId']/option[1]")
+    @FindBy(xpath="//*[@id='toAccountId']/option[2]")
     public WebElement selectAccount1;
 
     @FindBy(css="[id='transferForm']>div>input")

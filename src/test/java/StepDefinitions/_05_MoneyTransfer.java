@@ -21,8 +21,10 @@ public class _05_MoneyTransfer {
     @Given("User Navigates to Open New Account and Makes New Account")
     public void userNavigatesToOpenNewAccountAndMakesNewAccount() {
         dp.myClick(np.openNewAccount);
+        dp.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("type")));
+        try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
         dp.myClick(dp.openNewAccountBtn);
-        pp.bekle(10);
+
 
 
 
@@ -35,9 +37,9 @@ public class _05_MoneyTransfer {
 
     }
 
-    @And("User Transfers Money")
-    public void userTransfersMoney() {
-        dp.mySendKeys(dp.amountMoney, "100");
+    @And("User Transfers Money  {string}")
+    public void userTransfersMoney(String money) {
+        dp.mySendKeys(dp.amountMoney, money);
         dp.myClick(dp.selectAccount);
         dp.myClick(dp.selectAccount1);
         dp.myClick(dp.transferButton);
@@ -49,6 +51,8 @@ public class _05_MoneyTransfer {
         String complete = dp.transferComplete.getText();
         Assert.assertEquals(complete, "Transfer Complete!", "Hatalı para transferi.");
     }
+
+
 }
 
 
