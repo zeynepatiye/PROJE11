@@ -5,6 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = {
+
                 "src/test/java/FeatureFiles/_01_UserRegistration.feature",
                 "src/test/java/FeatureFiles/_02_UserLogin.feature",
                 "src/test/java/FeatureFiles/_03_PayBillFunctionality.feature",
@@ -12,7 +13,9 @@ import io.cucumber.testng.CucumberOptions;
                 "src/test/java/FeatureFiles/_05_InterAccountMoneyTransfer.feature"
 
         },
+        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         glue = {"StepDefinitions"}
+
 )
 public class _00_TestRunner extends AbstractTestNGCucumberTests {
 }
